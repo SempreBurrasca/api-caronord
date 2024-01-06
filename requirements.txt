@@ -7,5 +7,4 @@ tensorflow>=2.0
 Pillow
 eth-account
 cryptography
-secrets
-stringcase
+
