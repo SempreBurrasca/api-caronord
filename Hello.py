@@ -109,6 +109,6 @@ def main():
         if st.button('Autentica Cappello'):
             prediction = classify_image(image)
             st.write(prediction)
-
+    st.text("Ricorda che questo è un sistema sperimentale che crea \nun wallet solo come prova di autenticità del cappello in tuo possesso. \nE' quindi sconsigliato usare questo wallet per conservare crypto o nft di valore. \nRicorda che chiunque lo abbia posseduto può detenerne le chiavi private.")
 if __name__ == '__main__':
     main()
