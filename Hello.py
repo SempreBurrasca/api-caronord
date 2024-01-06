@@ -6,8 +6,6 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.image import img_to_array
 from tensorflow.keras.applications.densenet import preprocess_input
 
-
-
 # Carica il modello .h5
 model = load_model('./modelloClassificazioneCappelli-v1.h5')
 # Nomi delle classi
@@ -28,6 +26,10 @@ class_names = {
     13: 'cap_8',
     14: 'cap_9'
 }
+
+def get_passphrase(class_name):
+    return st.secrets[class_name]
+
 def preprocess_image(image, target_size=(224, 224)):
     """Pre-elabora l'immagine per la classificazione usando la funzione standard di DenseNet."""
     # Converti l'immagine PIL in un array NumPy
@@ -59,7 +61,10 @@ def classify_image(image):
     max_prob = prediction[max_prob_index]
 
     if max_prob > 0.98:  # 98% di probabilità
-        return f"Questo è il cappello: {class_names[max_prob_index]}: {max_prob * 100:.2f}% il suo address è:"
+        class_name = class_names[max_prob_index]
+        print(class_name)
+        passphrase = get_passphrase(class_name)
+        return f"Questo è il cappello: {class_name}: {max_prob * 100:.2f}%\nPassphrase: {passphrase}"
     else:
         return "C'è un errore con il tuo cappello. Contatta il venditore o prova a fare una foto migliore."
 

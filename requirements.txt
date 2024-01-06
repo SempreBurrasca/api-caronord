@@ -5,3 +5,8 @@ pydeck
 streamlit
 tensorflow>=2.0
 Pillow
+opencv-python-headless
+eth-account
+cryptography
+cv2
+hashlib
