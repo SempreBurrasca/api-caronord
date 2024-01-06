@@ -1,10 +1,12 @@
 import streamlit as st
-from tensorflow.keras.models import load_model
-from tensorflow.keras.preprocessing.image import img_to_array
-from tensorflow.keras.applications.densenet import preprocess_input
 from PIL import Image
 import numpy as np
 import tensorflow as tf
+from tensorflow.keras.models import load_model
+from tensorflow.keras.preprocessing.image import img_to_array
+from tensorflow.keras.applications.densenet import preprocess_input
+
+
 
 # Carica il modello .h5
 model = load_model('./modelloClassificazioneCappelli-v1.h5')
