@@ -71,7 +71,7 @@ def main():
         image = Image.open(uploaded_file)
         st.image(image, caption='Immagine caricata', use_column_width=True)
 
-        if st.button('Classifica'):
+        if st.button('Autentica Cappello'):
             prediction = classify_image(image)
             st.write(prediction)
 
