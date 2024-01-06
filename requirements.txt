@@ -4,4 +4,7 @@ pandas
 pydeck
 streamlit
 tensorflow>=2.0
+tensorflow.keras.models 
+tensorflow.keras.preprocessing.image
+tensorflow.keras.applications.densenet
 PIL
