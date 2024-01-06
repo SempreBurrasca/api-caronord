@@ -4,4 +4,4 @@ pandas
 pydeck
 streamlit
 tensorflow>=2.0
-PIL
+Pillow
