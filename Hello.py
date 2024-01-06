@@ -94,7 +94,7 @@ def classify_image(image):
         class_name = class_names[max_prob_index]
         passphrase = get_passphrase(class_name)
         private_key, wallet_address = generate_ethereum_wallet(class_name, passphrase)
-        return f"Questo è il cappello: {class_name}: {max_prob * 100:.2f}%\nIndirizzo ETH: {wallet_address}\nChiave privata: {private_key}\nPassphrase: {passphrase}"
+        return f"Questo è il cappello: {class_name}: {max_prob * 100:.2f}%\nIndirizzo ETH: {wallet_address}\nChiave privata: {private_key}\n"
     else:
         return "C'è un errore con il tuo cappello. Contatta il venditore o prova a fare una foto migliore."
 
