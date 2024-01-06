@@ -3,5 +3,5 @@ numpy
 pandas
 pydeck
 streamlit
-tensorflow
-PIL  
+tensorflow>=2.0
+PIL
