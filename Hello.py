@@ -100,7 +100,7 @@ def classify_image(image):
 
 def main():
     st.title("Autenticatore P.A.T.T.E.R.N. ")
-    st.text("Assicurati di inquadrare con una corretta illuminazione il tartan del cappello in tuo possesso, orientalo con l'etichetta della taglia verso l'alto.")
+    st.text("Assicurati di inquadrare con una corretta illuminazione \nil tartan del cappello in tuo possesso, orientalo con \nl'etichetta della taglia verso l'alto.")
     uploaded_file = st.file_uploader("Carica un'immagine", type=["jpg", "jpeg", "png"])
     if uploaded_file is not None:
         image = Image.open(uploaded_file)
